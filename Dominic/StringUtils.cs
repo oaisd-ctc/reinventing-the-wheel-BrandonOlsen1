@@ -10,116 +10,20 @@
         {
             string newStr = "";
             int len = Length(str);
-            for ( int i = 0 ; i < len ; i++ )
+            char[] ltr = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
+            char[] utr = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
+            foreach (char cr in str)
             {
-                char c = str[i];
-                if ( c == 'a' )
+                foreach ( char lc in ltr )
                 {
-                    newStr += 'A';
-                }
-                else if (c == 'b' )
-                {
-                    newStr += 'B';
-                }
-                else if (c == 'c' )
-                {
-                    newStr += 'C';
-                }
-                else if (c == 'd' )
-                {
-                    newStr += 'D';
-                }
-                else if (c =='e' )
-                {
-                    newStr += 'E';
-                }
-                else if (c == 'f' )
-                {
-                    newStr += 'F';
-                }
-                else if (c == 'g')
-                {
-                    newStr += 'G';
-                }
-                else if (c == 'h')
-                {
-                    newStr += 'H';
-                }
-                else if (c == 'i')
-                {
-                    newStr += 'I';
-                }
-                else if (c == 'j')
-                {
-                    newStr += 'J';
-                }
-                else if (c == 'k')
-                {
-                    newStr += 'K';
-                }
-                else if (c == 'l')
-                {
-                    newStr += 'L';
-                }
-                else if (c == 'm')
-                {
-                    newStr += 'M';
-                }
-                else if (c == 'n')
-                {
-                    newStr += 'N';
-                }
-                else if (c == 'o')
-                {
-                    newStr += 'O';
-                }
-                else if (c == 'p')
-                {
-                    newStr += 'P';
-                }
-                else if (c == 'q')
-                {
-                    newStr += 'q';
-                }
-                else if (c == 'r')
-                {
-                     newStr += 'R';
-                }
-                else if (c == 's')
-                {
-                    newStr += 'S';
-                }
-                else if (c == 't')
-                {
-                    newStr += 'T';
-                }
-                else if (c == 'u')
-                {
-                    newStr += 'U';
-                }
-                else if (c == 'v')
-                {
-                    newStr += 'V';
-                }
-                else if (c == 'w')
-                {
-                    newStr += 'W';
-                }
-                else if (c == 'x')
-                {
-                    newStr += 'X';
-                } 
-                else if (c == 'y')
-                {
-                    newStr += 'Y';
-                }
-                else if (c == 'z')
-                {
-                    newStr+= 'Z';
-                }
-                else 
-                {
-                    newStr += c;
+                    if ( lc == cr )
+                    {
+                        newStr += utr[lc];
+                    }
+                    else 
+                    {
+                        newStr += str[lc];
+                    }
                 }
             }
             return str;
