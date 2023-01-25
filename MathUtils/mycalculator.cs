@@ -4,8 +4,6 @@ namespace Calculator
     public static class mycalculator
     {
 
-
-
         
 
 
@@ -16,6 +14,69 @@ namespace Calculator
 
 
 
+        public static double exponet(double x, double y)
+        {
+            
+            double ans = 1;
+
+            for (int i = 0; i < y; i++)
+            {
+                double growth = ans * x;
+                 ans = growth;
+            }
+            
+        
+
+            return ans;
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public static double Square(double x)
+        {
+            double o = 0;
+            double t = 0;
+            
+
+            for (o = 0; o < x; o++)
+            {
+
+                t = o;
+                double answer = o * t;
+               
+
+
+                    if (x == answer)
+                    {
+                        break;
+                        
+                    }
+            }
+            
+           return o;
+
+
+
+
+
+
+    
+            
+
+
+        }
 
 
 
@@ -35,47 +96,29 @@ namespace Calculator
 
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         public static double Max(int x, int y)
         {
-            if(x > y)
+            if (x > y)
             {
-                 return x;
+                return x;
             }
             else
             {
                 return y;
             }
-                   
+
         }
-         public static double Min(int x, int y)
+        public static double Min(int x, int y)
         {
-            if(x > y)
+            if (x > y)
             {
-                 return y;
+                return y;
             }
             else
             {
                 return x;
             }
-                   
+
         }
 
 
@@ -89,7 +132,7 @@ namespace Calculator
 
 
 
-          public static int Add(int x, int y)
+        public static int Add(int x, int y)
         {
             return x + y;
         }
