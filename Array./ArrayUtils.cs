@@ -1,5 +1,13 @@
 ﻿public static class ArrayUtils
 {
+    public static void Main(string[] args)
+    {
+        int[] array = { 1, 2, 3, 4, 5};
+        foreach (int n in Reverse(array))
+        {
+            Console.Write($"{n} ");
+        }
+    }
     public static int Average(int[] nums)
     {
         int total = 0;
@@ -70,9 +78,9 @@
     {
         int temp;
         // int[] newArray = new int[nums.Length];
-        for (int i = 0; i < nums.Length - 1 ; i++)
+        for (int i = 0; i < nums.Length - 1; i++)
         {
-            for (int j = i + 1;j< nums.Length; j++)
+            for (int j = i + 1; j < nums.Length; j++)
             {
                 if (nums[i] > nums[j])
                 {
@@ -88,9 +96,9 @@
     {
         double temp;
         // int[] newArray = new int[nums.Length];
-        for (int i = 0; i < nums.Length - 1 ; i++)
+        for (int i = 0; i < nums.Length - 1; i++)
         {
-            for (int j = i + 1;j< nums.Length; j++)
+            for (int j = i + 1; j < nums.Length; j++)
             {
                 if (nums[i] > nums[j])
                 {
@@ -106,9 +114,9 @@
     {
         int temp;
         // int[] newArray = new int[nums.Length];
-        for (int i = 0; i < nums.Length - 1 ; i++)
+        for (int i = 0; i < nums.Length - 1; i++)
         {
-            for (int j = i + 1;j< nums.Length; j++)
+            for (int j = i + 1; j < nums.Length; j++)
             {
                 if (nums[i] < nums[j])
                 {
@@ -124,9 +132,9 @@
     {
         double temp;
         // int[] newArray = new int[nums.Length];
-        for (int i = 0; i < nums.Length - 1 ; i++)
+        for (int i = 0; i < nums.Length - 1; i++)
         {
-            for (int j = i + 1;j< nums.Length; j++)
+            for (int j = i + 1; j < nums.Length; j++)
             {
                 if (nums[i] < nums[j])
                 {
@@ -174,8 +182,25 @@
         }
         return total;
     }
-    public static int Reverse(int[] nums)
+    public static int[] Reverse(int[] nums)
     {
+        int[] newArray = new int[nums.Length];
         
+        int array = nums.Length -1;
+        int rev = nums.Length - nums.Length;
+        while (array >= 0)
+        {
+            nums[array] = newArray[rev];
+            if (array != 0)
+            {
+                array--;
+                rev++;
+            }
+            
+        }
+        
+        
+
+        return newArray;
     }
 }
