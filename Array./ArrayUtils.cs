@@ -2,14 +2,14 @@
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine("iudbhfgkhjb");
-        int[] array = { 1, 2, 3, 4, 5};
         
-        foreach (int n in Reverse(array))
+        double[] array = { 1, 3, 2, 5, 4};
+        double[] ns = Copy(array);
+        foreach (double n in ns)
         {
-            Console.WriteLine($"{n} ");
+            Console.Write($"{n} ");
         }
-        
+        Console.WriteLine();
     }
     public static int Average(int[] nums)
     {
@@ -191,7 +191,7 @@
         
         int array = nums.Length -1;
         int rev = nums.Length - nums.Length;
-        while (array >= 0)
+        for (int i = nums.Length - 1; i >= 0; i--)
         {
             revArray[rev] = nums[array];
             if (array != 0)
@@ -201,5 +201,38 @@
             }   
         }
         return revArray;
+    }
+    public static double[] Reverse(double[] nums)
+    {
+        double[] revArray = new double[nums.Length];
+        
+        int array = nums.Length -1;
+        int rev = nums.Length - nums.Length;
+        for (int i = nums.Length - 1; i >= 0; i--)
+        {
+            revArray[rev] = nums[array];
+            if (array != 0)
+            {
+                array--;
+                rev++;
+            }   
+        }
+        return revArray;
+    }
+    public static int[] Copy(int[] nums)
+    {
+        int[] newArray = new int[nums.Length];
+        newArray = nums;
+        return newArray;
+    }
+    public static double[] Copy(double[] nums)
+    {
+        double[] newArray = new double[nums.Length];
+        newArray = nums;
+        return newArray;
+    }
+    public static int Find(int[] nums)
+    {
+        
     }
 }
