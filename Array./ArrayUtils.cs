@@ -2,12 +2,14 @@
 {
     public static void Main(string[] args)
     {
-        int num = 2;
+        int num = 5;
         int[] array = { 1, 3, 2, 5, 4 };
-        int n = Find(array, num);
+        double num = 5.16;
+        double[] array = { 1.05, 3.55, 2.23, 5.16, 4.76 };
+        // int n = ;
         // foreach (int n in ns)
         // {
-        Console.Write($"{n} ");
+        Console.Write($"{num} is found here: [{Find(array, num)}] ");
         // }
         Console.WriteLine();
     }
@@ -233,16 +235,25 @@
     }
     public static int Find(int[] nums, int number)
     {
-        int answer = 0;
-
-
-        for (int i = nums.Length; i >= 0; i--)
+        for (int i = 0; i < nums.Length; i++)
         {
-            
+            if (number == nums[i])
+            {
+                return i;
+            }
         }
-
-
-
-        return answer;
+        return -1;
     }
+    public static int Find(double[] nums, double number)
+    {   
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (number == nums[i])
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
+    
 }
