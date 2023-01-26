@@ -1,6 +1,6 @@
 ﻿namespace MyUtilities
 {
-    public static class ArrayUtils
+    public static class StringUtils
     {
         public static int Length(string str)
         {
@@ -8,7 +8,7 @@
         }
         public static string ToUpper(string str)
         {
-            string newStr = "";
+            string newStr = " ";
             int len = Length(str);
             char[] ltr = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
             char[] utr = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
@@ -42,7 +42,8 @@
                     {
                         newStr += ltr[uc]; 
                     }
-                    else{
+                    else
+                    {
                         newStr += str[cr];
                     }
                 }
