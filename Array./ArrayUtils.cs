@@ -2,13 +2,13 @@
 {
     public static void Main(string[] args)
     {
-        
-        double[] array = { 1, 3, 2, 5, 4};
-        double[] ns = Copy(array);
-        foreach (double n in ns)
-        {
-            Console.Write($"{n} ");
-        }
+        int num = 2;
+        int[] array = { 1, 3, 2, 5, 4 };
+        int n = Find(array, num);
+        // foreach (int n in ns)
+        // {
+        Console.Write($"{n} ");
+        // }
         Console.WriteLine();
     }
     public static int Average(int[] nums)
@@ -188,8 +188,8 @@
     public static int[] Reverse(int[] nums)
     {
         int[] revArray = new int[nums.Length];
-        
-        int array = nums.Length -1;
+
+        int array = nums.Length - 1;
         int rev = nums.Length - nums.Length;
         for (int i = nums.Length - 1; i >= 0; i--)
         {
@@ -198,15 +198,15 @@
             {
                 array--;
                 rev++;
-            }   
+            }
         }
         return revArray;
     }
     public static double[] Reverse(double[] nums)
     {
         double[] revArray = new double[nums.Length];
-        
-        int array = nums.Length -1;
+
+        int array = nums.Length - 1;
         int rev = nums.Length - nums.Length;
         for (int i = nums.Length - 1; i >= 0; i--)
         {
@@ -215,7 +215,7 @@
             {
                 array--;
                 rev++;
-            }   
+            }
         }
         return revArray;
     }
@@ -231,8 +231,18 @@
         newArray = nums;
         return newArray;
     }
-    public static int Find(int[] nums)
+    public static int Find(int[] nums, int number)
     {
-        
+        int answer = 0;
+
+
+        for (int i = nums.Length; i >= 0; i--)
+        {
+            
+        }
+
+
+
+        return answer;
     }
 }
