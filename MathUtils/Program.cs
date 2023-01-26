@@ -7,11 +7,11 @@ public class program
     {
 
 
-        // double number = 4;
-        // double number2 = 3;
-        // double answer = mycalculator.exponet(number, number2);
-        // Console.WriteLine(answer);
-        //   Console.WriteLine("");
+         double num1 = 25005;
+       
+        double answer = mycalculator.Square(num1);
+        Console.WriteLine(answer);
+          
 
 
           
