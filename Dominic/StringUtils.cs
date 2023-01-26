@@ -8,8 +8,7 @@
         }
         public static string ToUpper(string str)
         {
-            string newStr = " ";
-            int len = Length(str);
+            string newStr = new string('f*');
             char[] ltr = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
             char[] utr = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
             foreach (char cr in str)
@@ -19,10 +18,11 @@
                     if ( lc == cr )
                     {
                         newStr += utr[lc];
+                        Console.WriteLine(newStr);
                     }
                     else 
                     {
-                        newStr += str[lc];
+                        newStr += str[cr];
                     }
                 }
             }
@@ -49,6 +49,27 @@
                 }
             }
             return newStr;
+        }
+        public static string Reverse(string str)
+        {
+            int len = Length(str);
+            string newStr = "";
+            for ( int i = len - 1 ; i >= 0 ; i-- )
+            {
+                newStr += str[len - i];
+            }
+            return newStr;
+        }
+        public static bool HasLetter(string str, char ltr)
+        {
+            foreach (char cr in str)
+            {
+                if (cr == ltr)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
