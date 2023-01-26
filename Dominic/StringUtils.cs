@@ -71,5 +71,37 @@
             }
             return false;
         }
+        public static int CountVowels(string word)
+        {
+            char[] vowels = { 'a', 'e', 'i', 'o', 'u', 'A', 'I', 'O', 'U', 'E' };
+            int vowelCount = 0;
+            foreach (char letter in word)
+            {
+                foreach (char vowel in vowels)
+                {
+                    if (letter == vowel)
+                    {
+                        vowelCount++;
+                    }
+                }
+            }
+            return vowelCount;
+        }
+        public static int CountConsonants(string word)
+        {
+            string consonants = "qwrtyplkjhgfdszxcvbnmQWSDFRTGHYKLPMNBVCXZJ";
+            int consonantCount = 0;
+            foreach (char letter in word)
+            {
+                foreach (char consonant in consonants)
+                {
+                    if (letter == consonant)
+                    {
+                        consonantCount++;
+                    }
+                }
+            }
+            return -1;
+        }
     }
 }
