@@ -11,9 +11,10 @@
             string newStr = "";
             char[] ltr = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
             char[] utr = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
+            bool isLower = true;
             foreach (char cr in str)
             {
-                
+
                 foreach ( char lc in ltr )
                 {
                     if ( lc == cr )
@@ -21,10 +22,15 @@
                         newStr += utr[lc];
                         Console.WriteLine(newStr);
                     }
-                    else 
+                    else
                     {
-                        newStr += str[cr];
+                        isLower = false;
                     }
+                }
+                if (isLower == false)
+                {
+                    newStr += cr;
+                    isLower = true;
                 }
             }
             return str;
@@ -35,6 +41,7 @@
             int len = Length(str);
             char[] ltr = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
             char[] utr = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
+            bool isUpper = true;
             foreach (char cr in str)
             {
                 foreach (char uc in utr)
