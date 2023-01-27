@@ -9,31 +9,43 @@
         public static string ToUpper(string str)
         {
             string newStr = "";
-            char[] ltr = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
-            char[] utr = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
-            bool isLower = true;
-            foreach (char cr in str)
+            foreach( char letter in str )
             {
-
-                foreach ( char lc in ltr )
+                if ( letter > '\u0061' && letter < '\u007A' )
                 {
-                    if ( lc == cr )
-                    {
-                        newStr += utr[lc];
-                        Console.WriteLine(newStr);
-                    }
-                    else
-                    {
-                        isLower = false;
-                    }
-                }
-                if (isLower == false)
-                {
-                    newStr += cr;
-                    isLower = true;
+                    char newChar = (char)(str[letter] + 32);
+                    newStr += newChar;
                 }
             }
-            return str;
+            return newStr;
+
+
+            // string newStr = "";
+            // char[] ltr = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
+            // char[] utr = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
+            // bool isLower = true;
+            // foreach (char cr in str)
+            // {
+// 
+                // foreach ( char lc in ltr )
+                // {
+                    // if ( lc == cr )
+                    // {
+                        // newStr += utr[lc];
+                        // Console.WriteLine(newStr);
+                    // }
+                    // else
+                    // {
+                        // isLower = false;
+                    // }
+                // }
+                // if (isLower == false)
+                // {
+                    // newStr += cr;
+                    // isLower = true;
+                // }
+            // }
+            // return str;
         }
         public static string ToLower(string str)
         {
@@ -51,9 +63,12 @@
                         newStr += ltr[uc]; 
                     }
                     else
-                    {
-                        newStr += str[cr];
-                    }
+                    isUpper = false;
+                }
+                if (isUpper == false)
+                {
+                    newStr += str[cr];
+                    isUpper = true;
                 }
             }
             return newStr;
