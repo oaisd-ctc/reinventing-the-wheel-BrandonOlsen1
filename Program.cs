@@ -5,7 +5,7 @@ public static class Program
 {
     public static void Main(string[] args)
     {
-        StringUtils.ToUpper("Azyx");
+        Console.WriteLine(StringUtils.ToUpper("wegvop;ndu"));
     }  
 }
     
