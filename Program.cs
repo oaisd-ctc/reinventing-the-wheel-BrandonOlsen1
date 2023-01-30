@@ -5,7 +5,7 @@ public static class Program
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine(StringUtils.ToUpper("wegvop;ndu"));
+        Console.WriteLine("GenericUriParser");
     }  
 }
     

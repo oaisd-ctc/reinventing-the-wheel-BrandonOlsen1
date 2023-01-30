@@ -295,5 +295,40 @@
             }
             return consonantCount;
         }
+        public static string RemoveLetter(string str, char letter)
+        {
+            string newStr = "";
+            foreach ( char ltr in str )
+            {
+                if ( str[ltr] != letter )
+                {
+                    newStr += letter;
+                }
+            }
+            return newStr;
+        }
+        public static bool HasWord(string str, string word)
+        {
+            int correctLetters = 0;
+            foreach (char letter in str )
+            {
+                foreach ( char ltr in word )
+                {
+                    if ( str[letter + ltr] == word[ltr] )
+                    {
+                        correctLetters++;
+                    }
+                    else
+                    {
+                        correctLetters = 0;
+                    }
+                }
+            }
+            if ( correctLetters == Length(word) )
+            {
+                return true;
+            } 
+            return false;
+        }
     }
 }
