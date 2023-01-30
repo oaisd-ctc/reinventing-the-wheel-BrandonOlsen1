@@ -4,40 +4,104 @@ namespace Calculator
     public static class mycalculator
     {
 
+
+
+
+
+
+
+        public static double Ceiling(double x)
+        {
+            int answer = 0;
+            for (int i = 0; i <= x; i++)
+            {
+                int answerr = i;
+                answer = answerr;
+            }
+
+            double realanswer = answer += 1;
+            return realanswer;
+
+        }
+        public static double Ceiling(decimal x)
+        {
+            int answer = 0;
+            for (int i = 0; i <= x; i++)
+            {
+                int answerr = i;
+                answer = answerr;
+            }
+
+            double realanswer = answer += 1;
+            return realanswer;
+
+        }
+
+
+
+
+
+
+        public static double Floor(double x)
+        {
+            int answer = 0;
+            for (int i = 0; i <= x; i++)
+            {
+                int answerr = i;
+                answer = answerr;
+            }
+
+
+            return answer;
+        }
+
+         public static double Floor(decimal x)
+        {
+            int answer = 0;
+            for (int i = 0; i <= x; i++)
+            {
+                int answerr = i;
+                answer = answerr;
+            }
+
+
+            return answer;
+        }
+
+
+
+
+
+
+        public const double PI = 3.1415926535897931;
         
 
 
 
-
-
-
-
-
-
-
-
-     public const double PI = 3.1415926535897931;
-
-
-
-  public static double Round(double x, int y)
-{
-    for (int i = 0; i < y; i++)
-        x *= 10;
-
-    int whole = (int)x;
-    double fraction = x - whole;
-
-    if (fraction >= 0.5)
-        whole++;
-
-    x = whole;
-
-    for (int i = 0; i < y; i++)
-        x /= 10.0;
-
-    return x;
-}
+        public static double Sign(double x)
+        {
+            if (x > 0)
+            {
+                return 1;
+            }
+            else 
+            {
+                return -1;
+            }
+            
+        }
+        public static double Sign(int x)
+        {
+            if (x > 0)
+            {
+                return 1;
+            }
+            else 
+            {
+                return -1;
+            }
+            
+        }
 
 
 
@@ -45,20 +109,23 @@ namespace Calculator
 
         public static double exponet(double x, double y)
         {
-            
             double ans = 1;
-
             for (int i = 0; i < y; i++)
             {
                 double growth = ans * x;
-                 ans = growth;
+                ans = growth;
             }
-            
-        
-
             return ans;
-
-
+        }
+          public static double exponet(int x, int y)
+        {
+            double ans = 1;
+            for (int i = 0; i < y; i++)
+            {
+                double growth = ans * x;
+                ans = growth;
+            }
+            return ans;
         }
 
 
@@ -71,32 +138,37 @@ namespace Calculator
         {
             double o = 0;
             double t = 0;
-            
-
             for (o = 1; o < x; o += 0.0000001)
             {
-
                 t = o;
                 double answer = o * t;
-               
+                if (x <= answer)
+                {
+                    break;
 
-
-                    if (x <= answer)
-                    {
-                        break;
-                        
-                    }
+                }
             }
-        
-
             double final = Math.Round(o, 6);
-
-           return final;
-
-
-
+            return final;
         }
-        
+         public static double Square(int x)
+        {
+            double o = 0;
+            double t = 0;
+            for (o = 1; o < x; o += .00000001)
+            {
+                t = o;
+                double answer = o * t;
+                if (x <= answer)
+                {
+                    break;
+
+                }
+            }
+            double final = Math.Round(o, 6);
+            return final;
+        }
+
 
 
 
