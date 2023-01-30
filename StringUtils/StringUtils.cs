@@ -302,7 +302,7 @@
             {
                 if ( str[ltr] != letter )
                 {
-                    newStr += letter;
+                    newStr += str[ltr];
                 }
             }
             return newStr;
@@ -329,6 +329,42 @@
                 return true;
             } 
             return false;
+        }
+        public static string ReplaceLetter(string str, char letter, char rLetter)
+        {
+            string newStr = "";
+            foreach ( char ltr in str )
+            {
+                if ( str[ltr] != letter )
+                {
+                    newStr += str[ltr];
+                }
+                else if ( str[ltr] == letter )
+                {
+                    newStr += rLetter;
+                }
+                else 
+                {
+                    newStr += "\n";
+                }
+            }
+            return newStr;
+        }
+        public static string InsertWord(string str, string word, int location)
+        {
+            string newStr = "";
+            foreach ( char letter in str )
+            {
+                if ( letter < location ||letter > location)
+                {
+                    newStr += str[letter];
+                }
+                else if ( letter >= location )
+                {
+                    newStr += word;
+                }
+            }
+            return newStr;
         }
     }
 }
