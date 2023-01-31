@@ -9,7 +9,7 @@ namespace Calculator
 
 
 
-
+        // The whole number above the one given
         public static double Ceiling(double x)
         {
             int answer = 0;
@@ -40,7 +40,7 @@ namespace Calculator
 
 
 
-
+// The whole number below the one given
 
         public static double Floor(double x)
         {
@@ -63,21 +63,15 @@ namespace Calculator
                 int answerr = i;
                 answer = answerr;
             }
-
-
             return answer;
         }
 
-
-
-
-
-
+    // What pie equals
         public const double PI = 3.1415926535897931;
         
 
 
-
+    // Is it a positive or negitive
         public static double Sign(double x)
         {
             if (x > 0)
@@ -106,7 +100,7 @@ namespace Calculator
 
 
 
-
+        // Multiple the first number by itself by the second number of times
         public static double exponet(double x, double y)
         {
             double ans = 1;
@@ -132,7 +126,7 @@ namespace Calculator
 
 
 
-
+        //finds the square root of any number
 
         public static double Square(double x)
         {
@@ -172,7 +166,7 @@ namespace Calculator
 
 
 
-
+    //finds the absolute value of the number
         public static double AbsoluteValue(double x)
         {
             if (x > 0)
@@ -213,6 +207,8 @@ namespace Calculator
 
         }
 
+
+        //What number is greater
         public static double Max(int x, int y)
         {
             if (x > y)
@@ -225,6 +221,21 @@ namespace Calculator
             }
 
         }
+        public static double Max(double x, double y)
+        {
+            if (x > y)
+            {
+                return x;
+            }
+            else
+            {
+                return y;
+            }
+
+        }
+
+
+        //what number is less then the other
         public static double Min(int x, int y)
         {
             if (x > y)
@@ -238,6 +249,18 @@ namespace Calculator
 
         }
 
+        public static double Min(double x, double y)
+        {
+            if (x > y)
+            {
+                return y;
+            }
+            else
+            {
+                return x;
+            }
+
+        }
 
 
 
@@ -249,6 +272,7 @@ namespace Calculator
 
 
 
+    // add 2 numbers
         public static int Add(int x, int y)
         {
             return x + y;
@@ -265,6 +289,7 @@ namespace Calculator
         }
 
 
+        //subtract 2 numbers
         public static int Subtract(int x, int y)
         {
             return x - y;
@@ -280,6 +305,7 @@ namespace Calculator
             return x - y;
         }
 
+        //multiply 2 numbers
         public static int Mulitply(int x, int y)
         {
             return x * y;
@@ -295,7 +321,7 @@ namespace Calculator
             return x * y;
         }
 
-
+    // divide 2 numbers
         public static double Divide(int x, int y)
         {
             return x / y;
