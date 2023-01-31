@@ -1,18 +1,5 @@
 ﻿public static class ArrayUtils
 {
-    public static void Main(string[] args)
-    {
-        // int num = 5;
-        // int[] array = { 1, 3, 2, 5, 4 };
-        double num = 5.16;
-        double[] array = { 1.05, 3.55, 2.23, 5.16, 4.76 };
-        // int n = ;
-        // foreach (int n in ns)
-        // {
-        Console.Write($"the array is {GetLength(array)} long ");
-        // }
-        Console.WriteLine();
-    }
     public static int Average(int[] nums)
     {
         int total = 0;
