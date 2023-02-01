@@ -1,4 +1,4 @@
-﻿using Calculator;
+﻿using MyUtility;
 
 public class program
 {
@@ -7,18 +7,7 @@ public class program
     {
 
 
-       
-        
-          
-
-
-          
-
-
-
-
     }
-
 
 }
 

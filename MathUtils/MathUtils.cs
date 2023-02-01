@@ -1,14 +1,8 @@
-namespace Calculator
+namespace MyUtility
 
 {
     public static class mycalculator
     {
-
-
-
-
-
-
         // The whole number above the one given
         public static double Ceiling(double x)
         {
@@ -36,10 +30,6 @@ namespace Calculator
             return realanswer;
 
         }
-
-
-
-
 // The whole number below the one given
 
         public static double Floor(double x)
@@ -69,12 +59,10 @@ namespace Calculator
     // What pie equals
         public const double PI = 3.1415926535897931;
         
-
-
     // Is it a positive or negitive
         public static double Sign(double x)
         {
-            if (x > 0)
+            if (x >= 0)
             {
                 return 1;
             }
@@ -86,7 +74,7 @@ namespace Calculator
         }
         public static double Sign(int x)
         {
-            if (x > 0)
+            if (x >= 0)
             {
                 return 1;
             }
@@ -96,10 +84,6 @@ namespace Calculator
             }
             
         }
-
-
-
-
         // Multiple the first number by itself by the second number of times
         public static double exponet(double x, double y)
         {
@@ -121,11 +105,6 @@ namespace Calculator
             }
             return ans;
         }
-
-
-
-
-
         //finds the square root of any number
 
         public static double Square(double x)
@@ -139,11 +118,10 @@ namespace Calculator
                 if (x <= answer)
                 {
                     break;
-
                 }
             }
-            double final = Math.Round(o, 6);
-            return final;
+            
+            return o;
         }
          public static double Square(int x)
         {
@@ -156,16 +134,11 @@ namespace Calculator
                 if (x <= answer)
                 {
                     break;
-
                 }
             }
-            double final = Math.Round(o, 6);
-            return final;
+            
+            return o;
         }
-
-
-
-
     //finds the absolute value of the number
         public static double AbsoluteValue(double x)
         {
@@ -177,8 +150,6 @@ namespace Calculator
             {
                 return x * -1;
             }
-
-
         }
         public static double AbsoluteValue(float x)
         {
@@ -190,8 +161,6 @@ namespace Calculator
             {
                 return x * -1;
             }
-
-
         }
         public static int AbsoluteValue(int x)
         {
@@ -203,11 +172,7 @@ namespace Calculator
             {
                 return x * -1;
             }
-
-
         }
-
-
         //What number is greater
         public static double Max(int x, int y)
         {
@@ -219,7 +184,6 @@ namespace Calculator
             {
                 return y;
             }
-
         }
         public static double Max(double x, double y)
         {
@@ -231,10 +195,7 @@ namespace Calculator
             {
                 return y;
             }
-
         }
-
-
         //what number is less then the other
         public static double Min(int x, int y)
         {
@@ -246,7 +207,6 @@ namespace Calculator
             {
                 return x;
             }
-
         }
 
         public static double Min(double x, double y)
@@ -259,19 +219,7 @@ namespace Calculator
             {
                 return x;
             }
-
         }
-
-
-
-
-
-
-
-
-
-
-
     // add 2 numbers
         public static int Add(int x, int y)
         {
