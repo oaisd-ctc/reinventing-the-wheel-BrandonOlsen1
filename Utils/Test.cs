@@ -66,7 +66,7 @@ public class Tests
     }
     public void MathCeilingdouble()
     {
-        int[] nums = {1, 2, 3, 4};
-        mycalculator.Ceiling
+        double nums = 3.56;
+        MathUtils.Ceiling(nums);
     }
 }

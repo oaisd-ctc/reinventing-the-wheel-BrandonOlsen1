@@ -1,7 +1,7 @@
-namespace Calculator
+namespace MyUtilities
 
 {
-    public static class mycalculator
+    public static class MathUtils
     {
 
 
