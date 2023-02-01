@@ -94,5 +94,17 @@ public class Tests
         int nums = 3;
         MathUtils.Sign(nums);
     }
+    public void MathExponentDouble()
+    {
+        double nums = 3.56;
+        double power = 2;
+        MathUtils.exponet(nums, power);
+    }
+    public void MathExponentInt()
+    {
+        int nums = 3;
+        int power = 2;
+        MathUtils.exponet(nums, power);
+    }
     
 }
