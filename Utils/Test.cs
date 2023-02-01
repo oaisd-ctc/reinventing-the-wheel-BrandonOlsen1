@@ -5,12 +5,13 @@ public class Tests
 {
     [Fact]
     //ArrayUtils
-    public void ArrayReverseInt()
+    public void ArrayAverageInt()
     {
         int[] nums = { 1, 2, 3, 4 };
-        ArrayUtils.Average(nums);
+
+        Assert.Equal(2.5, ArrayUtils.Average(nums));
     }
-    public void ArrayReverseDouble()
+    public void ArrayAverageDouble()
     {
         double[] nums = { 1.25, 2.33, 3.52, 4.15 };
         ArrayUtils.Average(nums);
@@ -64,6 +65,52 @@ public class Tests
     {
         int[] nums = { 1, 2, 3, 4 };
         ArrayUtils.Sum(nums);
+    }
+    public void ArrayProductInt()
+    {
+        int[] nums = { 1, 2, 3, 4 };
+        ArrayUtils.Product(nums);
+    }
+    public void ArrayProductDouble()
+    {
+        double[] nums = { 1, 2, 3, 4 };
+        ArrayUtils.Product(nums);
+    }
+    public void ArrayReverseInt()
+    {
+        int[] nums = { 1, 2, 3, 4 };
+        ArrayUtils.Reverse(nums);
+    }
+    public void ArrayReverseDouble()
+    {
+        double[] nums = { 1, 2, 3, 4 };
+        ArrayUtils.Reverse(nums);
+    }
+    public void ArrayCopyInt()
+    {
+        int[] nums = { 1, 2, 3, 4 };
+        ArrayUtils.Copy(nums);
+    }
+    public void ArrayCopyDouble()
+    {
+        double[] nums = { 1, 2, 3, 4 };
+        ArrayUtils.Copy(nums);
+    }
+    public void ArrayFindInt()
+    {
+        int[] nums = {1, 2, 3, 4};
+        int num = 2;
+        ArrayUtils.Find(nums, num);
+    }
+    public void ArrayFindDouble()
+    {
+        double[] nums = {1.5, 2.5, 3.5, 4.5};
+        double num = 3.5;
+        ArrayUtils.Find(nums, num);
+    }
+    public void ArrayGetLengthInt()
+    {
+        int[] nums = {1, 2, 3, 4};
     }
     // MathUtils 
     public void MathCeilingdouble()
@@ -230,4 +277,51 @@ public class Tests
         MathUtils.Divide(num1, num2);
     }
     //StringUtils
+    public void StringUpper()
+    {
+        string str = "Hi there";
+        StringUtils.ToUpper(str);
+    }
+    public void StringLower()
+    {
+        string str = "Hi there";
+        StringUtils.ToLower(str);
+    }
+    public void StringReverse()
+    {
+        string str = "Hi there";
+        StringUtils.Reverse(str);
+    }
+    public void StringHasL()
+    {
+        string str = "Hi there";
+        char letter = 'i';
+        StringUtils.HasLetter(str, letter);
+    }
+    public void StringVowels()
+    {
+        string str = "Hi there";
+        StringUtils.CountVowels(str);
+    }
+    public void StringConsonants()
+    {
+        string str = "Hi there";
+        StringUtils.CountConsonants(str);
+    }
+    public void StringRemove()
+    {
+        string str = "Hi there";
+        char letter = 'e';
+        StringUtils.RemoveLetter(str, letter);
+    }
+    public void StringHasW()
+    {
+        string str = "Hi there";
+        string word = "Hi";
+        StringUtils.HasWord(str, word);
+    }
+    public void StringReplace()
+    {
+        // string 
+    }
 }
