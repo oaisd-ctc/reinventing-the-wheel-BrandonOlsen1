@@ -69,4 +69,30 @@ public class Tests
         double nums = 3.56;
         MathUtils.Ceiling(nums);
     }
+    public void MathCeilingdecimal()
+    {
+        decimal nums = 3.67674m;
+        MathUtils.Ceiling(nums);
+    }
+    public void MathFloorDouble()
+    {
+        double nums = 3.56;
+        MathUtils.Floor(nums);
+    }
+    public void MathFloorDecimal()
+    {
+        decimal nums = 3.67674m;
+        MathUtils.Floor(nums);
+    }
+    public void MathSignDouble()
+    {
+        double nums = 3.56;
+        MathUtils.Sign(nums);
+    }
+    public void MathSignInt()
+    {
+        int nums = 3;
+        MathUtils.Sign(nums);
+    }
+    
 }
