@@ -1,4 +1,5 @@
 using Xunit;
+using MyUtilities;
 
 public class Tests
 {
@@ -62,5 +63,10 @@ public class Tests
     {
         int[] nums = {1, 2, 3, 4};
         ArrayUtils.Sum(nums);
+    }
+    public void MathCeilingdouble()
+    {
+        int[] nums = {1, 2, 3, 4};
+        mycalculator.Ceiling
     }
 }
