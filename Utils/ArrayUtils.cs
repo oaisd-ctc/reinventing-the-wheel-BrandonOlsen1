@@ -2,6 +2,7 @@
 {
     public static class ArrayUtils
     {
+        // gets the average of all elements of an array
         public static int Average(int[] nums)
         {
             int total = 0;
@@ -20,6 +21,7 @@
             }
             return total / nums.Length;
         }
+        // gets the index of the maximum number of an array
         public static int Max(int[] nums)
         {
             int total = 0;
@@ -44,6 +46,7 @@
             }
             return total;
         }
+        // gets the index of the minimum number of an array
         public static int Min(int[] nums)
         {
             int total = 0;
@@ -68,10 +71,11 @@
             }
             return total;
         }
+        // sorts the array so where the minimum number is index 0 and the maximum number is the last index
         public static int[] SortAscending(int[] nums)
         {
             int temp;
-            // int[] newArray = new int[nums.Length];
+            
             for (int i = 0; i < nums.Length - 1; i++)
             {
                 for (int j = i + 1; j < nums.Length; j++)
@@ -89,7 +93,7 @@
         public static double[] SortAscending(double[] nums)
         {
             double temp;
-            // int[] newArray = new int[nums.Length];
+            
             for (int i = 0; i < nums.Length - 1; i++)
             {
                 for (int j = i + 1; j < nums.Length; j++)
@@ -104,10 +108,11 @@
             }
             return nums;
         }
+        // sorts the array so where the maximum number is index 0 and the minimum number is the last index
         public static int[] SortDecending(int[] nums)
         {
             int temp;
-            // int[] newArray = new int[nums.Length];
+            
             for (int i = 0; i < nums.Length - 1; i++)
             {
                 for (int j = i + 1; j < nums.Length; j++)
@@ -125,7 +130,7 @@
         public static double[] SortDecending(double[] nums)
         {
             double temp;
-            // int[] newArray = new int[nums.Length];
+            
             for (int i = 0; i < nums.Length - 1; i++)
             {
                 for (int j = i + 1; j < nums.Length; j++)
@@ -140,6 +145,7 @@
             }
             return nums;
         }
+        // adds all the elements of an array together
         public static int Sum(int[] nums)
         {
             int total = 0;
@@ -158,6 +164,7 @@
             }
             return total;
         }
+        // multiplies all the elements together 
         public static int Product(int[] nums)
         {
             int total = 1;
@@ -176,6 +183,7 @@
             }
             return total;
         }
+        // reverses the order of the array
         public static int[] Reverse(int[] nums)
         {
             int[] revArray = new int[nums.Length];
@@ -210,6 +218,7 @@
             }
             return revArray;
         }
+        // makes a copy of the array
         public static int[] Copy(int[] nums)
         {
             int[] newArray = new int[nums.Length];
@@ -222,6 +231,7 @@
             newArray = nums;
             return newArray;
         }
+        // finds the index of the specified number
         public static int Find(int[] nums, int number)
         {
             for (int i = 0; i < nums.Length; i++)
@@ -244,6 +254,7 @@
             }
             return -1;
         }
+        // gets the length of the array
         public static int GetLength(int[] nums)
         {
             int length = nums.Length;
