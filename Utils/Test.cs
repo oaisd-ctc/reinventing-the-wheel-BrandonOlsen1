@@ -14,104 +14,115 @@ public class Tests
     public void ArrayAverageDouble()
     {
         double[] nums = { 1.25, 2.33, 3.52, 4.15 };
-        ArrayUtils.Average(nums);
+        Assert.Equal(2.81, ArrayUtils.Average(nums);
     }
     public void ArrayMaxInt()
     {
         int[] nums = { 1, 2, 3, 4 };
-        ArrayUtils.Max(nums);
+        Assert.Equal(4, ArrayUtils.Max(nums));
     }
     public void ArrayMaxDouble()
     {
         double[] nums = { 1.25, 2.33, 3.52, 4.15 };
-        ArrayUtils.Max(nums);
+        Assert.Equal(4.15, ArrayUtils.Max(nums));
     }
     public void ArrayMinInt()
     {
         int[] nums = { 1, 2, 3, 4 };
-        ArrayUtils.Min(nums);
+        Assert.Equal(1, ArrayUtils.Min(nums));
     }
     public void ArrayMinDouble()
     {
         double[] nums = { 1.25, 2.33, 3.52, 4.15 };
-        ArrayUtils.Min(nums);
+        Assert.Equal(1.25, ArrayUtils.Min(nums));
     }
     public void ArraySortAccendingInt()
     {
         int[] nums = { 1, 2, 3, 4 };
-        ArrayUtils.SortAscending(nums);
+        Assert.Equal(nums, ArrayUtils.SortAscending(nums));
     }
     public void ArraySortAccendingDouble()
     {
         double[] nums = { 1, 2, 3, 4 };
-        ArrayUtils.SortAscending(nums);
+        Assert.Equal(nums, ArrayUtils.SortAscending(nums));
     }
     public void ArraySortDeccendingInt()
     {
         int[] nums = { 1, 2, 3, 4 };
-        ArrayUtils.SortDecending(nums);
+        int[] expected = { 4, 3, 2, 1 };
+        Assert.Equal(expected, ArrayUtils.SortDecending(nums));
     }
     public void ArraySortDeccendingDouble()
     {
         double[] nums = { 1, 2, 3, 4 };
-        ArrayUtils.SortDecending(nums);
+        double[] expected = { 4, 3, 2, 1 };
+        Assert.Equal(expected, ArrayUtils.SortDecending(nums));
     }
     public void ArraySumInt()
     {
         int[] nums = { 1, 2, 3, 4 };
-        ArrayUtils.Sum(nums);
+        Assert.Equal(10, ArrayUtils.Sum(nums));
     }
     public void ArraySumDouble()
     {
         int[] nums = { 1, 2, 3, 4 };
-        ArrayUtils.Sum(nums);
+        Assert.Equal(10, ArrayUtils.Sum(nums));
     }
     public void ArrayProductInt()
     {
         int[] nums = { 1, 2, 3, 4 };
-        ArrayUtils.Product(nums);
+        Assert.Equal(24, ArrayUtils.Product(nums));
     }
     public void ArrayProductDouble()
     {
         double[] nums = { 1, 2, 3, 4 };
-        ArrayUtils.Product(nums);
+        Assert.Equal(24, ArrayUtils.Product(nums));
     }
     public void ArrayReverseInt()
     {
         int[] nums = { 1, 2, 3, 4 };
-        ArrayUtils.Reverse(nums);
+        int[] expected = { 4, 3, 2, 1 };
+        Assert.Equal(expected, ArrayUtils.Reverse(nums));
     }
     public void ArrayReverseDouble()
     {
         double[] nums = { 1, 2, 3, 4 };
-        ArrayUtils.Reverse(nums);
+        double[] expected = { 4, 3, 2, 1 };
+        Assert.Equal(expected, ArrayUtils.Reverse(nums));
     }
     public void ArrayCopyInt()
     {
         int[] nums = { 1, 2, 3, 4 };
-        ArrayUtils.Copy(nums);
+        Assert.Equal(nums, ArrayUtils.Copy(nums));
     }
     public void ArrayCopyDouble()
     {
         double[] nums = { 1, 2, 3, 4 };
-        ArrayUtils.Copy(nums);
+        Assert.Equal(nums, ArrayUtils.Copy(nums));
     }
     public void ArrayFindInt()
     {
-        int[] nums = {1, 2, 3, 4};
+        int[] nums = { 1, 2, 3, 4 };
         int num = 2;
-        ArrayUtils.Find(nums, num);
+        Assert.Equal(1, ArrayUtils.Find(nums, num));
     }
     public void ArrayFindDouble()
     {
-        double[] nums = {1.5, 2.5, 3.5, 4.5};
+        double[] nums = { 1.5, 2.5, 3.5, 4.5 };
         double num = 3.5;
-        ArrayUtils.Find(nums, num);
+        Assert.Equal(2, ArrayUtils.Find(nums, num));
     }
     public void ArrayGetLengthInt()
     {
-        int[] nums = {1, 2, 3, 4};
+        int[] nums = { 1, 2, 3, 4 };
+        Assert.Equal(4, ArrayUtils.GetLength(nums));
     }
+    public void ArrayGetLengthDouble()
+    {
+        double[] nums = { 1, 2, 3, 4 };
+        Assert.Equal(4, ArrayUtils.GetLength(nums));
+    }
+
     // MathUtils 
     public void MathCeilingdouble()
     {
