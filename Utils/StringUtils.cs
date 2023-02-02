@@ -2,6 +2,7 @@
 {
     public static class StringUtils
     {
+    
         public static int Length(string str)
         {
             return str.Length;
