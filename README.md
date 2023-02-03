@@ -4,3 +4,5 @@ MyUtilities was designed to replace built-in Functions of the System Class witho
 
 <br />
 <h2>ArrayUtils</h2>
+<h2>MathUtils</h2>
+<h2>StringUtils</h2>
