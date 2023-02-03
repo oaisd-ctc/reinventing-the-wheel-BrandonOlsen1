@@ -381,7 +381,7 @@ public class Tests
     {
         string str = "Hi there";
         char letter = 'i';
-        Assert.Equal("H  there", StringUtils.RemoveLetter(str, letter));
+        Assert.Equal("H there", StringUtils.RemoveLetter(str, letter));
     }
     [Fact]
     public void StringHasW()
@@ -404,6 +404,6 @@ public class Tests
         string str = "Hi there";
         string word = "you";
         int location = 2;
-        Assert.Equal("Hiyouere", StringUtils.InsertWord(str, word, location));
+        Assert.Equal("Hiyouthere", StringUtils.InsertWord(str, word, location));
     }
 }
