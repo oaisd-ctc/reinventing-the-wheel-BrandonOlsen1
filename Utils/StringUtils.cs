@@ -298,23 +298,27 @@
         public static string RemoveLetter(string str, char letter)
         {
             string newStr = "";
+            int i = 0;
             foreach ( char ltr in str )
             {
-                if ( str[ltr] != letter )
+                if ( str[i] != letter )
                 {
-                    newStr += str[ltr];
+                    newStr += str[i];
                 }
+                i++;
             }
             return newStr;
         }
         public static bool HasWord(string str, string word)
         {
             int correctLetters = 0;
+            int i = 0;
             foreach (char letter in str )
             {
+                int j = 0;
                 foreach ( char ltr in word )
                 {
-                    if ( str[letter + ltr] == word[ltr] )
+                    if ( str[i + j] == word[j] )
                     {
                         correctLetters++;
                     }
@@ -322,7 +326,9 @@
                     {
                         correctLetters = 0;
                     }
+                    j++;
                 }
+                i++;
             }
             if ( correctLetters == Length(word) )
             {
@@ -330,16 +336,17 @@
             } 
             return false;
         }
-        public static string ReplaceLetter(string str, char letter, char rLetter)
+        public static string ReplaceLetter(string str, char letter, char rLetter = '_')
         {
             string newStr = "";
+            int i = 0;
             foreach ( char ltr in str )
             {
-                if ( str[ltr] != letter )
+                if ( str[i] != letter )
                 {
-                    newStr += str[ltr];
+                    newStr += str[i];
                 }
-                else if ( str[ltr] == letter )
+                else if ( str[i] == letter )
                 {
                     newStr += rLetter;
                 }
@@ -347,6 +354,7 @@
                 {
                     newStr += "\n";
                 }
+                i++;
             }
             return newStr;
         }

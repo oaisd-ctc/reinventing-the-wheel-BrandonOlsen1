@@ -2,6 +2,6 @@
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine(MyUtilities.StringUtils.InsertWord("Hi there", "grapes"));
+        Console.WriteLine(MyUtilities.StringUtils.RemoveLetter("Hi there", 'e'));
     }
 }
