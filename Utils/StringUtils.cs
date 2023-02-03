@@ -350,19 +350,21 @@
             }
             return newStr;
         }
-        public static string InsertWord(string str, string word, int location)
+        public static string InsertWord(string str, string word, int location = 0)
         {
             string newStr = "";
+            int i = 0;
             foreach ( char letter in str )
             {
-                if ( letter < location ||letter > location)
+                if ( i < location || i > location)
                 {
-                    newStr += str[letter];
+                    newStr += str[i];
                 }
-                else if ( letter >= location )
+                else if ( i >= location )
                 {
                     newStr += word;
                 }
+                i++;
             }
             return newStr;
         }

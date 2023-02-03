@@ -14,7 +14,7 @@ public class Tests
     public void ArrayAverageDouble()
     {
         double[] nums = { 1.25, 2.33, 3.52, 4.15 };
-        Assert.Equal(2.81, ArrayUtils.Average(nums);
+        Assert.Equal(2.81, ArrayUtils.Average(nums));
     }
     public void ArrayMaxInt()
     {
