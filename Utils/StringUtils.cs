@@ -310,31 +310,15 @@
             }
             return newStr;
         }
-        public static bool HasWord(string str, string word)
+        public static bool ContainsNumber(string str)
         {
-            int correctLetters = 0;
-            int i = 0;
-            foreach (char letter in str )
+            foreach ( char ltr in str )
             {
-                int j = 0;
-                foreach ( char ltr in word )
+                if ( ltr == '1' || ltr == '2' || ltr == '3' || ltr == '4' || ltr == '5' || ltr =='6' || ltr == '7' || ltr == '8' || ltr == '9' || ltr == '0' )
                 {
-                    if ( str[i + j] == word[j] )
-                    {
-                        correctLetters++;
-                    }
-                    else
-                    {
-                        correctLetters = 0;
-                    }
-                    j++;
+                    return true;
                 }
-                i++;
             }
-            if ( correctLetters == Length(word) )
-            {
-                return true;
-            } 
             return false;
         }
         public static string ReplaceLetter(string str, char letter, char rLetter = '_')
