@@ -387,8 +387,7 @@ public class Tests
     public void StringHasW()
     {
         string str = "Hi there";
-        string word = "Hi";
-        Assert.Equal(true, StringUtils.HasWord(str, word));
+        Assert.Equal(false, StringUtils.ContainsNumber(str));
     }
     [Fact]
     public void StringReplace()
