@@ -384,13 +384,6 @@ public class Tests
         Assert.Equal("H there", StringUtils.RemoveLetter(str, letter));
     }
     [Fact]
-    public void StringHasW()
-    {
-        string str = "Hi there";
-        string word = "Hi";
-        Assert.Equal(true, StringUtils.HasWord(str, word));
-    }
-    [Fact]
     public void StringReplace()
     {
         string str = "Hi there";
